@@ -1,20 +1,34 @@
-# chat-history-integration-ledger
+# chat-processing-suite
 
-Base scaffolding for unifying parallel implementations that analyze OpenAI ChatGPT data exports. Windows-first (PowerShell 7+). This repo includes only **base** materials. Run scripts to generate artifacts when ready.
+Complete chat processing, conversion, and export management suite
 
-## Layout
+## Overview
 
-- `docs/adr`: decision records.
-- `docs/ledger`: generated ledgers (indexes, hashes) will land here.
-- `scripts`: PowerShell utilities to inventory, parse, and verify.
-- `.github/workflows`: CI guards for LFS and verification.
+This is a consolidated project that combines multiple related tools and utilities into a unified repository. Each original project has been preserved as a separate branch to maintain full history and development lineage.
 
-## Quick start (Windows)
+## Project Branches
 
-```powershell
-# From repository root
-pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\lfs-track.ps1
-pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify-repo.ps1
-# Generate inventory and clustering when ready (produces files under docs/ledger/)
-pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\inventory.ps1 -DryRun
-pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\cluster-export.ps1 -DryRun
+- **chat-export-splitter**: Chat Export Splitter
+- **chat-history-ledger**: Chat History Ledger
+
+## Usage
+
+```bash
+# Switch to a specific project branch
+git checkout <branch-name>
+
+# View all available branches
+git branch -a
+
+# Compare differences between branches
+git diff branch1..branch2
+```
+
+## Consolidation Details
+
+- **Family**: chat-processing
+- **Total Projects Merged**: 2
+- **Consolidation Date**: 2025-10-09
+- **Repository Type**: Multi-branch project consolidation
+
+Each branch maintains the complete original project structure and can be developed independently or merged as needed.
