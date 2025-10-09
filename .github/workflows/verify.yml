@@ -1,0 +1,14 @@
+name: verify
+on:
+    push:
+        branches: [main, develop, ledger/bootstrap]
+    workflow_dispatch: {}
+jobs:
+    verify-repo:
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v4
+              with: { lfs: true }
+            - name: Verify
+              shell: pwsh
+              run: .\scripts\verify-repo.ps1 -RepoRoot .

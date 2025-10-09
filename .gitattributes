@@ -1,0 +1,13 @@
+# Normalize endings
+*.md text eol=lf
+*.ps1 text eol=lf
+*.sh  text eol=lf
+*.yml text eol=lf
+
+# Git LFS for large/binary artifacts (GitHub blocks ≥100 MiB)  # :contentReference[oaicite:5]{index=5}
+*.zip               filter=lfs diff=lfs merge=lfs -text
+openai-export/**/*.{json,html}            filter=lfs diff=lfs merge=lfs -text
+openai-export/**/*.{png,jpg,jpeg,gif,webp,heic,heif} filter=lfs diff=lfs merge=lfs -text
+openai-export/**/*.{wav,mp3,mp4,mov,webm} filter=lfs diff=lfs merge=lfs -text
+openai-export/**/*.{pdf,psd,ai}           filter=lfs diff=lfs merge=lfs -text
+*.part???           filter=lfs diff=lfs merge=lfs -text

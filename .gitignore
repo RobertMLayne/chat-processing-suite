@@ -1,27 +1,17 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-dist/
-build/
-.venv/
-.env
-
-# Node.js
-node_modules/
-npm-debug.log*
-
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-
 # OS
 .DS_Store
 Thumbs.db
 
-# Project specific
+# Python / tooling
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Editors
+.vscode/
+.idea/
+
+# Misc
 *.log
-temp/
-tmp/
+*.tmp
